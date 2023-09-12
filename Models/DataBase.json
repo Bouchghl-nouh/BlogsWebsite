@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "username": "user3",
+      "password": "$2b$10$FJUNqOV/mymh4zTRZdRyQ.3fgCZD/KWxAEN4JjodW3QnhR10Ghaya",
+      "email": "user3@gmail.com",
+      "image": "user3.jpg",
+      "id": 1
+    },
+    {
+      "username": "user2",
+      "password": "$2b$10$4j/7VQbCxH99NbCM1ENfYePobE8VfQOIpYBT5DEEAB7MHrapH6ode",
+      "email": "user2@gmail.com",
+      "image": "user2.jpg",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "password": "$2b$10$1VRiZI.lnM6l.pNx6Q639ua7XE8vEQV58n33cb0WUeu2n66LfL1wi",
+      "email": "admin@gmail.com",
+      "image": "user1.jpg",
+      "id": 3
+    },
+    {
+      "username": "abcfdsa",
+      "password": "$2b$10$2FfURhyhxefFxK82GFoI0.iHHvZ5LQNPjWs3yASuHIKg5q5tLxuXm",
+      "email": "ffas@user.com",
+      "image": "user2.jpg",
+      "id": 4
+    },
+    {
+      "username": "ffas@user.com",
+      "password": "$2b$10$Nkd9v81eJykfKZSsv2LoT.HGhqXyujnpe09Pzkmdtz3CuLXRgIxqW",
+      "email": "ffas@user.com",
+      "image": "user1.jpg",
+      "id": 5
+    },
+    {
+      "username": "user1",
+      "password": "$2b$10$Mfl6hts.Mjm/SNOLXMXEre6nEkE50HRHfQITalSBWwh2FGvhoacZO",
+      "email": "user1@gmail.com",
+      "image": "user1.jpg",
+      "id": 6
+    }
+  ],
+  "blogs": []
+}
