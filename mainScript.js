@@ -11,13 +11,12 @@ app.use(express.urlencoded({extended:true}))
 
 
 
-const userRouter = require('./Routes/userRoutes')
-app.use('/',userRouter)
-
-
+const userRouter = require('./Routes/userRoutes');
+app.use('/', userRouter);
+const BlogRouter = require('./Routes/blogRoutes');
+app.use('/', BlogRouter);
 app.use('/', (req, res) => {
     res.sendFile(__dirname + `/public/Html/404.html`);
-
 });
 app.listen(Port, () => {
     console.log(`Server listening at port ${Port}`);

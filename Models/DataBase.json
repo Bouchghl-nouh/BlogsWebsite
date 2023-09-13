@@ -8,40 +8,27 @@
       "id": 1
     },
     {
-      "username": "user2",
-      "password": "$2b$10$4j/7VQbCxH99NbCM1ENfYePobE8VfQOIpYBT5DEEAB7MHrapH6ode",
-      "email": "user2@gmail.com",
-      "image": "user2.jpg",
-      "id": 2
-    },
-    {
-      "username": "admin",
-      "password": "$2b$10$1VRiZI.lnM6l.pNx6Q639ua7XE8vEQV58n33cb0WUeu2n66LfL1wi",
-      "email": "admin@gmail.com",
-      "image": "user1.jpg",
-      "id": 3
-    },
-    {
-      "username": "abcfdsa",
-      "password": "$2b$10$2FfURhyhxefFxK82GFoI0.iHHvZ5LQNPjWs3yASuHIKg5q5tLxuXm",
-      "email": "ffas@user.com",
-      "image": "user2.jpg",
-      "id": 4
-    },
-    {
-      "username": "ffas@user.com",
-      "password": "$2b$10$Nkd9v81eJykfKZSsv2LoT.HGhqXyujnpe09Pzkmdtz3CuLXRgIxqW",
-      "email": "ffas@user.com",
-      "image": "user1.jpg",
-      "id": 5
-    },
-    {
-      "username": "user1",
-      "password": "$2b$10$Mfl6hts.Mjm/SNOLXMXEre6nEkE50HRHfQITalSBWwh2FGvhoacZO",
+      "username": "usesr1",
+      "password": "$2b$10$ex8gsrOrqZBNHyr2bWlq6OtPz6oc9ifPJu81jNky3eWtlvCyuD.Qy",
       "email": "user1@gmail.com",
       "image": "user1.jpg",
-      "id": 6
+      "id": 2
     }
   ],
-  "blogs": []
+  "blogs": [
+    {
+      "description": "GitHub is great website ",
+      "image": "github.jpg",
+      "title": "GitHub",
+      "author": "user3",
+      "id": 1
+    },
+    {
+      "description": "Certainly! Here's a short resume paragraph about GitHub:\r\n\r\n\"I am proficient in using GitHub, a widely-used platform for version control and collaborative software development. I have experience in creating and managing repositories, branching and merging code, and collaborating with teams through pull requests. I am also skilled in using GitHub's issue tracking and project management features to streamline development workflows and ensure efficient project coordination.\"",
+      "image": "user1.jpg",
+      "title": "abdelbasset",
+      "author": "user3",
+      "id": 2
+    }
+  ]
 }

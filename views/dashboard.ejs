@@ -6,9 +6,33 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <h1>Welcome to the Dashboard</h1>
-    <img width="100px" height="100px" src = "images/<%= user.image %>" alt="img" />
-    <p>Welcome <%= user.username %> .</p>
-    <a href="/logout">Logout</a>
+    <nav>
+      <h1>Welcome to the Dashboard</h1>
+      <img
+        width="100px"
+        height="100px"
+        src="images/<%= user.image %>"
+        alt="img"
+      />
+      <p>Welcome <%= user.username %> .</p>
+      <a href="/logout">Logout</a>
+    </nav>
+    <form action="/dashboard" method="POST" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="title" required />
+      <textarea name="description" cols="30" rows="10"></textarea>
+      <input type="file" name="image" accept="image/png, image/jpeg" />
+      <button type="submit">NewBlog</button>
+    </form>
+    <section>
+      <% myblogs.forEach((blog)=>{%>
+        <div class="blog">
+          <img width="100px" height="100px" src="images/<%= blog.image %>" alt="image">
+          <h3><%= blog.title %></h3>
+          <p><%= blog.description %></p>
+          <strong><%= blog.author %></strong>
+        </div>
+        <%});%>
+        
+    </section>
   </body>
 </html>

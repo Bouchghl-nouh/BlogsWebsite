@@ -1,13 +1,13 @@
 const jwt = require('jsonwebtoken')
-const axios = require('axios');
 const xss = require('xss');
 const bcrypt = require('bcrypt');
-const secretKey = "secretKey"
-const { body, validationResult } = require('express-validator');
+const secretKey = "secretKey";
 const DB = require('../Models/DataBase.json');
-
-
-
+const blogs = DB.blogs;
+const { body, validationResult } = require('express-validator');
+const path = require('path')
+const {addUser} = require('../Api/userApi');
+const {findUser} = require('../helpers/findUser');
 exports.userLogin = (req, res) => {
     const { username, password } = req.body;
     const errors = validationResult(req);
@@ -18,11 +18,10 @@ exports.userLogin = (req, res) => {
       username: xss(username),
       password: xss(password),
     };
-    let user = DB.users.find(user => user.username === sanitizedData.username);
+    let user = findUser(sanitizedData);
     if (!user) {
         return res.send("you are not registered");
     }
-    //console.log(user);
     bcrypt.compare(sanitizedData.password, user.password).then((valid) => {
       if (!valid) {
         return res.send("password incorrect");
@@ -30,7 +29,7 @@ exports.userLogin = (req, res) => {
     })
       const token = jwt.sign(
         { username: user.username, image: user.image },
-        'secretKey'
+        secretKey
       );
       res.cookie("token", token);
       return res.redirect("dashboard");
@@ -38,21 +37,18 @@ exports.userLogin = (req, res) => {
 }
 
 exports.renderDash = (req, res) => {
-    const user = req.decoded;
-    console.log(user.image);
-    return res.render('dashboard', { user });
+  const user = req.decoded;
+  const myblogs = blogs.filter((blog)=>blog.author=== user.username)
+    return res.render('dashboard', {user,myblogs });
 }
 
 exports.userLogout = (req, res) => {
-    const token = req.cookies.token;
     res.clearCookie("token");
-    console.log(token);
     return res.redirect('login')
 }
 
 exports.userRegister = async(req, res) => {
     const { username, password, ConfirmPassword, email } = req.body;
-    //console.log(req.body);
     if (password != ConfirmPassword) {
         return res.send("Your password and Confirm Password are not the same");
     }
@@ -67,7 +63,18 @@ exports.userRegister = async(req, res) => {
         password: xss(hashPassword),
         email: xss(email),
         image: xss(req.file.filename)
-    }
-    axios.post('http://localhost:3000/users', secureData);
+  }
+  let user = findUser(secureData);
+  if (user) {
+      return res.status(400).send("change the name please");
+  }
+    addUser(secureData);
     return res.redirect('login');
+}
+exports.RenderLogin = (req, res) => {
+    res.sendFile(path.join(__dirname+ '/../public/Html/login.html'));
+}
+exports.RenderRegister = (req, res) => {
+    res.sendFile(path.join(__dirname+ '/../public/Html/register.html'));
+    
 }
