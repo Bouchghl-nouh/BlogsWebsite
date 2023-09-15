@@ -38,7 +38,7 @@ exports.userLogin = (req, res) => {
 
 exports.renderDash = (req, res) => {
   const user = req.decoded;
-  const myblogs = blogs.filter((blog)=>blog.author=== user.username)
+  const myblogs = blogs.filter((blog) => blog.author === user.username)
     return res.render('dashboard', {user,myblogs });
 }
 

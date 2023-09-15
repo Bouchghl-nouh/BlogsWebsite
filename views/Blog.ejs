@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs</title>
+      <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Blog</title>
 </head>
 <body>
-      <section>
-      <% blogs.forEach((blog)=>{%>
-      <div class="blog">
+        <div class="blog">
         <img
           width="100px"
           height="100px"
-          src="images/<%= blog.image %>"
+          src="/images/<%= blog.image %>"
           alt="image"
         />
         <h3><%= blog.title %></h3>
         <p><%= blog.description %></p>
         <strong><%= blog.author %></strong>
       </div>
-      <%});%>
-    </section>
+      
 </body>
 </html>
-
-   <!-- <i class="bx bxs-edit-alt"></i>
-      <i class="bx bxs-trash-alt"></i> -->

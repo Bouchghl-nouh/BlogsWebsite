@@ -17,18 +17,11 @@
   ],
   "blogs": [
     {
-      "description": "GitHub is great website ",
-      "image": "github.jpg",
-      "title": "GitHub",
+      "description": "Github is great ",
+      "image": "user1.jpg",
+      "title": "finally it works ",
       "author": "user3",
       "id": 1
-    },
-    {
-      "description": "Certainly! Here's a short resume paragraph about GitHub:\r\n\r\n\"I am proficient in using GitHub, a widely-used platform for version control and collaborative software development. I have experience in creating and managing repositories, branching and merging code, and collaborating with teams through pull requests. I am also skilled in using GitHub's issue tracking and project management features to streamline development workflows and ensure efficient project coordination.\"",
-      "image": "user1.jpg",
-      "title": "abdelbasset",
-      "author": "user3",
-      "id": 2
     }
   ]
 }

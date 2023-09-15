@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
-const cookies = require('cookie-parser')
+const cookies = require('cookie-parser');
+const methodOverrid = require('method-override');
 const Port = process.env.PORT || 8000;
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(cookies())
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
-
+app.use(methodOverrid("_method"));
 
 
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Blog</title>
+  </head>
+  <body>
+    <h1>Edit Blog</h1>
+
+    <form action="/blog-edit/<%= blog.id%>" method="POST" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="title" value="<%= blog.title%>" required />
+      <textarea name="description" cols="30" rows="10" ><%= blog.description%></textarea>
+        <img  width="100px"height="100px" src="/images/<%= blog.image %>"   alt="image" />
+      <input type="file" name="image" accept="image/png, image/jpeg"  />
+      <button type="submit" >UpdateBlog</button>
+    </form>
+  </body>
+</html>

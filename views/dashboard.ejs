@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="/JavaScript/main.js"defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>Dashboard</title>
   </head>
   <body>
@@ -25,14 +32,20 @@
     </form>
     <section>
       <% myblogs.forEach((blog)=>{%>
-        <div class="blog">
-          <img width="100px" height="100px" src="images/<%= blog.image %>" alt="image">
-          <h3><%= blog.title %></h3>
-          <p><%= blog.description %></p>
-          <strong><%= blog.author %></strong>
-        </div>
-        <%});%>
-        
+      <div class="blog" id="<%= blog.id%>">
+        <img
+          width="100px"
+          height="100px"
+          src="images/<%= blog.image %>"
+          alt="image"
+        />
+        <h3><%= blog.title %></h3>
+        <p><%= blog.description %></p>
+        <strong><%= blog.author %></strong>
+        <button onclick="DeleteBlog('<%= blog.id%>')">delete</button>
+        <a href="/blog-edit/<%= blog.id%>">edit</a>
+      </div>
+      <%});%>
     </section>
   </body>
 </html>

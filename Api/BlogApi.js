@@ -8,4 +8,8 @@ const api = axios.create({
  function addBlog(blog) {
    return api.post('/', blog);
 }
-module.exports = {addBlog};
+function EditBlog(blog) {
+    return api.post('/',blog)
+}
+
+module.exports = {addBlog,EditBlog};
