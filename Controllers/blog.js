@@ -1,7 +1,5 @@
 const { addBlog ,EditBlog,DeleteBlog} = require('../Api/BlogApi');
-const jwt = require('jsonwebtoken');
 const xss = require('xss');
-const axios = require('axios');
 const DB = require('../Models/DataBase.json')
 const {findBlog} = require('../helpers/findBlog');
 exports.AddingBlog = (req, res) => {
@@ -53,7 +51,6 @@ exports.EditingBlog = async (req, res) => {
         image: xss(image? image.filename:blog.image),
         title: xss(newBlog.title)
     }
-    //await axios.patch('http://localhost:3000/blogs/' + id, EditedBlog);
     await EditBlog(id, EditedBlog);
     return res.redirect('../dashboard');
 }

@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-    background-color: #71c4ef;
+    background-color: white;
     margin-bottom: 50px;
 }
 
@@ -43,7 +43,7 @@ nav .container .links {
 nav .container .links a {
     position: relative;
     text-decoration: none;
-    color: #fff;
+    color: #71c4ef ;
     overflow: hidden;
 }
 
@@ -66,9 +66,8 @@ nav .container .links a:hover::before {
     left: 0%;
 }
 footer {
-    background-color: #71c4ef;
     text-align: center;
     height: 25px;
-    color: #fff;
+    color: black;
     width: 100%;
 }

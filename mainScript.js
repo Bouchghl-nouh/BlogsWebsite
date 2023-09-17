@@ -21,5 +21,5 @@ app.use('/', (req, res) => {
     res.sendFile(__dirname + `/public/Html/404.html`);
 });
 app.listen(Port, () => {
-    console.log(`Server listening at port ${Port}`);
+    console.log(`Server listening at port ${process.env.Port}`);
 });
