@@ -3,17 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Blog</title>
+       <link rel="stylesheet" href="../CSS/header&footer.css" />
+      <link rel="stylesheet" href="../CSS/edit-blog.css">
+       <title>Edit Blog</title>
   </head>
   <body>
+    <nav>
+      <div class="container">
+        <h1>Nouh <span>Blogs</span></h1>
+        <div class="links">
+          <a href="../blogs">Home</a>
+          <a href="../login">Login</a>
+          <a href="../register">Sign Up</a>
+        </div>
+      </div>
+    </nav>
     <h1>Edit Blog</h1>
+     <section class="first-section">
+    <div class="container">
+    <form action="/blog-edit/<%=blog.id%>" method="POST" enctype="multipart/form-data">
+      <div class="input-box">
+        <input type="text" name="title" placeholder="title" required class="user-input" value="<%= blog.title%>" />
+      </div>
+         <textarea name="description" cols="30" rows="10"  ><%= blog.description%></textarea>
+       <img  width="100px"height="100px" src="/images/<%= blog.image %>"   alt="image" />
+      <input type="file" name="image" accept="image/png, image/jpeg" />
+      <button type="submit" class="submit">UpdateBlog</button>
+    </form>
+    </div>
+    </section>
+    
+     <footer><p>&copy Ahmed Nouh blogs</p></footer>
+  </body>
+</html>
+<%/*%>
 
-    <form action="/blog-edit/<%= blog.id%>" method="POST" enctype="multipart/form-data">
+  <form action="/blog-edit/<%= blog.id%>" method="POST" enctype="multipart/form-data">
       <input type="text" name="title" placeholder="title" value="<%= blog.title%>" required />
       <textarea name="description" cols="30" rows="10" ><%= blog.description%></textarea>
         <img  width="100px"height="100px" src="/images/<%= blog.image %>"   alt="image" />
       <input type="file" name="image" accept="image/png, image/jpeg"  />
       <button type="submit" >UpdateBlog</button>
     </form>
-  </body>
-</html>
+    <%*/%>

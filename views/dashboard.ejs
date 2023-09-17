@@ -7,45 +7,67 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/CSS/header&footer.css">
+    <link rel="stylesheet" href="/CSS/dashboard.css">
     <script src="/JavaScript/main.js"defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>Dashboard</title>
   </head>
   <body>
-    <nav>
-      <h1>Welcome to the Dashboard</h1>
-      <img
-        width="100px"
-        height="100px"
-        src="images/<%= user.image %>"
-        alt="img"
-      />
-      <p>Welcome <%= user.username %> .</p>
-      <a href="/logout">Logout</a>
+        <nav>
+        <div class="container">
+        <h1>Nouh <span>Blogs</span></h1>
+        <div class="links">
+            <a href="blogs">Home</a>
+            <a href="logout">Logout</a>
+             <img   width="40px"height="40px" src="images/<%= user.image %>" alt="img"/>
+             <span><%= user.username%></span>
+        </div>
+        </div>
     </nav>
+    <section class="first-section">
+    <div class="container">
     <form action="/dashboard" method="POST" enctype="multipart/form-data">
-      <input type="text" name="title" placeholder="title" required />
-      <textarea name="description" cols="30" rows="10"></textarea>
-      <input type="file" name="image" accept="image/png, image/jpeg" />
-      <button type="submit">NewBlog</button>
-    </form>
-    <section>
-      <% myblogs.forEach((blog)=>{%>
-      <div class="blog" id="<%= blog.id%>">
-        <img
-          width="100px"
-          height="100px"
-          src="images/<%= blog.image %>"
-          alt="image"
-        />
-        <h3><%= blog.title %></h3>
-        <p><%= blog.description %></p>
-        <strong><%= blog.author %></strong>
-        <button onclick="DeleteBlog('<%= blog.id%>')">delete</button>
-        <a href="/blog-edit/<%= blog.id%>">edit</a>
+      <div class="input-box">
+        <input type="text" name="title" placeholder="title" required class="user-input" />
       </div>
-      <%});%>
+         <textarea name="description" cols="40" rows="10"  >description ...</textarea>
+      
+      <input type="file" name="image" accept="image/png, image/jpeg" />
+      <button type="submit" class="submit">NewBlog</button>
+    </form>
+    </div>
     </section>
+    <section class="myblogs">  
+      <div class="container">
+      <% myblogs.forEach((blog)=>{%>
+        <div class="box" id="<%= blog.id%>">
+          <img
+            src="images/<%= blog.image%>"
+            alt="image"
+            width="100px"
+            height="100px"
+          />
+          <div class="content">
+            <h3><%= blog.title%></h3>
+            <p><%= blog.description %></p>
+            <strong><%= blog.author%></strong>
+          </div>
+          <div class="info">
+            <a href="/blog/<%= blog.id%>">Read More</a>
+            <i class="bx bx-arrow-to-right"></i>
+          </div>
+           <div class="editing">
+             <button onclick="DeleteBlog('<%= blog.id%>')"><i class='bx bxs-trash-alt bx-sm'></i></button>
+        <a href="/blog-edit/<%= blog.id%>"><i class='bx bxs-edit-alt bx-sm' ></i></a>
+        </div>
+        </div>
+      <%});%>
+      </div>
+    </section>
+      <footer>
+       <p>&copy Ahmed Nouh blogs</p>
+    </footer>
   </body>
 </html>

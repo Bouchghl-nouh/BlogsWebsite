@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/blogs.css" />
+    <link rel="stylesheet" href="../CSS/header&footer.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Blogs</title>
-</head>
-<body>
-      <section>
-      <% blogs.forEach((blog)=>{%>
-      <div class="blog">
-        <img
-          width="100px"
-          height="100px"
-          src="images/<%= blog.image %>"
-          alt="image"
-        />
-        <h3><%= blog.title %></h3>
-        <p><%= blog.description %></p>
-        <strong><%= blog.author %></strong>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1>Nouh <span>Blogs</span></h1>
+        <div class="links">
+          <a href="blogs">Home</a>
+          <a href="login">Login</a>
+          <a href="register">Sign Up</a>
+        </div>
       </div>
-      <%});%>
+    </nav>
+    <section>
+      <div class="container">
+        <% blogs.forEach((blog)=>{%>
+        <div class="box">
+          <img
+            src="images/<%= blog.image%>"
+            alt="image"
+            width="100px"
+            height="100px"
+          />
+          <div class="content">
+            <h3><%= blog.title%></h3>
+            <p class="description"><%= blog.description %></p>
+            <strong><%= blog.author%></strong>
+          </div>
+          <div class="info">
+            <a href="/blog/<%= blog.id%>">Read More</a>
+            <i class="bx bx-arrow-to-right"></i>
+          </div>
+        </div>
+        <%});%>
+      </div>
     </section>
-</body>
+    <footer><p>&copy Ahmed Nouh blogs</p></footer>
+  </body>
 </html>
-
-   <!-- <i class="bx bxs-edit-alt"></i>
-      <i class="bx bxs-trash-alt"></i> -->

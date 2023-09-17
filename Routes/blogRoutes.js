@@ -10,10 +10,10 @@ router.get('/blog/:id', getBlog);
 
 router.get('/blogs', getBlogs);
 
-router.post('/blog/delete/:id', deleteBlog);
+router.delete('/blog/delete/:id', requireAuth,deleteBlog);
 
-router.get('/blog-edit/:id', getEditBlog);
+router.get('/blog-edit/:id', requireAuth,getEditBlog);
 
-router.post('/blog-edit/:id',upload.single('image'), EditingBlog);
+router.post('/blog-edit/:id',upload.single('image'), requireAuth,EditingBlog);
 
 module.exports = router;

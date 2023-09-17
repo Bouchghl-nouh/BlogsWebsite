@@ -8,8 +8,11 @@ const api = axios.create({
  function addBlog(blog) {
    return api.post('/', blog);
 }
-function EditBlog(blog) {
-    return api.post('/',blog)
+function EditBlog(id,blog) {
+    return api.patch('/'+id,blog)
+}
+function DeleteBlog(id) {
+    return api.delete('/' + id);
 }
 
-module.exports = {addBlog,EditBlog};
+module.exports = {addBlog,EditBlog,DeleteBlog};

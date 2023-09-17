@@ -17,6 +17,7 @@ app.use('/', userRouter);
 const BlogRouter = require('./Routes/blogRoutes');
 app.use('/', BlogRouter);
 app.use('/', (req, res) => {
+    
     res.sendFile(__dirname + `/public/Html/404.html`);
 });
 app.listen(Port, () => {

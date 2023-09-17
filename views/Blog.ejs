@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../CSS/header&footer.css" />
+       <link rel="stylesheet" href="../CSS/blog.css" />
       <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -10,17 +12,26 @@
     <title>Blog</title>
 </head>
 <body>
+   <nav>
+      <div class="container">
+        <h1>Nouh <span>Blogs</span></h1>
+        <div class="links">
+          <a href="../blogs">Home</a>
+          <a href="../login">Login</a>
+          <a href="../register">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <section>
         <div class="blog">
-        <img
-          width="100px"
-          height="100px"
-          src="/images/<%= blog.image %>"
-          alt="image"
-        />
+        <img   src="/images/<%= blog.image %>" alt="image" />
+        <div class="content">
         <h3><%= blog.title %></h3>
         <p><%= blog.description %></p>
         <strong><%= blog.author %></strong>
+        </div>
       </div>
-      
+      </section>
+       <footer><p>&copy Ahmed Nouh blogs</p></footer>
 </body>
 </html>

@@ -1,0 +1,180 @@
+span{
+    color: white;
+}
+nav img{
+    border-radius: 50%;
+}
+.first-section .container {
+    position: relative;
+    margin: 100px auto 50px;
+    background-color: #374357;
+    width: 400px;
+    padding: 30px;
+    border-radius: 5px;
+
+}
+
+.first-section .container form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    gap: 15px;
+    margin: auto;
+}
+
+
+.first-section .container form .input-box {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 6%/50%;
+    background: transparent;
+
+}
+
+.first-section .container form .input-box .user-input {
+    width: 90%;
+    height: 100%;
+    padding: 10px 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+
+}
+.first-section .container form textarea{
+            width: 100%;
+            height: 150px;
+            padding: 12px 10px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color:transparent;
+            font-size: 16px;
+            resize: none;
+            color:white;
+        
+}
+
+.first-section .container form .input-box .user-input::placeholder {
+    color: #fff;
+}
+
+
+
+.first-section .container form button {
+    padding: 5px;
+    border-radius: 6% / 50%;
+    border: 1px solid #fff;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #4d648d;
+    color:#fff;
+    }
+    
+    .first-section .container form button:hover {
+        background-color: #1F3A5F;
+}
+
+
+.first-section form .submit {
+    height: 40px;
+    cursor: pointer;
+}
+
+.myblogs {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.myblogs .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.myblogs .box {
+    box-shadow: 0 2px 15px rgb(0 0 0/10%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+.myblogs .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0/20%);
+}
+
+.myblogs .box img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.myblogs .box .content {
+    padding: 20px;
+}
+
+.myblogs .box .content h3 {
+    margin: 20px 0;
+}
+
+.myblogs .box .content p {
+    margin: 10px 0 0;
+    line-height: 1.5;
+    color: #777;
+    max-height: 30px;
+    overflow: hidden;
+    position: relative;
+    line-height: 1.8;
+}
+.myblogs .box .content p::before{
+    content: "...";
+    position: absolute;
+    right: 10px;
+    
+}
+
+.myblogs .box .info {
+    padding: 20px;
+    border-top: 1px solid #e6e6e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myblogs .box .info a {
+    color: #1787e0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.myblogs .box .info i {
+    color: #1787e0;
+}
+
+.myblogs .box:hover .info i {
+    animation: moving-arrow 0.6s linear infinite;}
+    .myblogs .box .editing{
+        display: flex;
+        padding : 10px 20px;
+        justify-content: space-between;
+    }
+    .myblogs .box .editing button{
+        background-color: transparent;
+        border:none;
+        cursor: pointer;
+        color: #1787e0;
+    }
+    .myblogs .box .editing a {
+        color : #1787e0;
+    }
+@keyframes moving-arrow {
+    100% {
+        transform: translateX(10px);
+    }
+}

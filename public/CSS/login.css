@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Work+Sans:wght@200;300;500;600;700;800&display=swap');
+
+
+section .container {
+    position: relative;
+    margin: 100px auto;
+    background-color: #374357;
+    width: 400px;
+    padding: 27px;
+    border-radius: 5px;
+    height: 480px;
+
+}
+
+section .container form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    gap: 15px;
+    margin: auto;
+}
+
+section .container form h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+section .container form .input-box {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #999;
+    border-radius: 6%/50%;
+    background: transparent;
+
+}
+
+section .container form .input-box .user-input {
+    width: 90%;
+    height: 100%;
+    padding: 10px 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+section .container form .input-box .user-input::placeholder {
+    color: #fff;
+}
+
+section .container form .input-box i {
+    position: absolute;
+    right: 20px;
+    transform: translateY(100%);
+    color: #fff;
+}
+
+section .container form button {
+    padding: 5px;
+    border-radius: 6% / 50%;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color:#4d648d;
+}
+section .container form button:hover{
+    background-color: #1F3A5F;
+}
+
+section form .register {
+    height: 40px;
+    cursor: pointer;
+}
+
+section form p {
+    color: #fff;
+    text-align: center;
+}
+
+section form a {
+    padding-left: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+section form a:hover {
+    text-decoration: underline;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+}

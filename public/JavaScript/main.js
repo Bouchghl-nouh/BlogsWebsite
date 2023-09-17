@@ -4,7 +4,7 @@ function DeleteBlog(id) {
   const element = document.getElementById(id);
   element.remove();
   fetch(`/blog/delete/${id}`, {
-    method: 'POST',
+    method: 'DELETE',
     headers: {
       Accept: 'application.json',
       'Content-Type': 'application/json'
@@ -16,5 +16,4 @@ function DeleteBlog(id) {
   }).catch(err => {
     console.log(err);
   })
-  console.log("request was sended")
 }

@@ -57,12 +57,13 @@ exports.userRegister = async(req, res) => {
         res.status(400).send("the informations you provided us are wrong");
     }
     const salt = await bcrypt.genSalt(10);
-    const hashPassword = await bcrypt.hash(password, salt);
+  const hashPassword = await bcrypt.hash(password, salt);
+  const image = req.file ? req.file.filename : 'default1.png';
     const secureData = {
         username: xss(username),
         password: xss(hashPassword),
         email: xss(email),
-        image: xss(req.file.filename)
+        image: xss(image)
   }
   let user = findUser(secureData);
   if (user) {

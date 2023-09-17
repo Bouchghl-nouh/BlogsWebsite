@@ -8,20 +8,83 @@
       "id": 1
     },
     {
-      "username": "usesr1",
-      "password": "$2b$10$ex8gsrOrqZBNHyr2bWlq6OtPz6oc9ifPJu81jNky3eWtlvCyuD.Qy",
-      "email": "user1@gmail.com",
-      "image": "user1.jpg",
+      "username": "L",
+      "password": "$2b$10$XlkaGdBnCJRG6LYrvnni6OHDb8WfffU5BbSs27WMCYKQO1hoRVBti",
+      "email": "L@gmail.com",
+      "image": "L.jpg",
       "id": 2
+    },
+    {
+      "username": "N",
+      "password": "$2b$10$y5mueN4NBKUxV9uUO5DMw.DySMxeW1lDEzyvq7uOLNH62HoaNFXVi",
+      "email": "N@gmail.com",
+      "image": "N.jpg",
+      "id": 3
+    },
+    {
+      "username": "N",
+      "password": "$2b$10$FX.qRuZpNlXkINiMz/uRauSgc/sWoVqpp1X3ashlzdK/yG3vVCUNi",
+      "email": "N@gmail.com",
+      "image": "N.jpg",
+      "id": 4
+    },
+    {
+      "username": "M",
+      "password": "$2b$10$4.9jTiZ6RIPSUJz2mP5Lq.LVthg.5z/7Tp6EwJ57EX1.qVXSsxEzO",
+      "email": "m@gmail.com",
+      "image": "default1.png",
+      "id": 5
     }
   ],
   "blogs": [
     {
-      "description": "Github is great ",
-      "image": "user1.jpg",
-      "title": "finally it works ",
-      "author": "user3",
+      "description": "\"Death Note\" is a renowned Japanese manga and anime series created by Tsugumi Ohba and Takeshi Obata. The story centers around Light Yagami, an exceptionally intelligent high school student who discovers a mysterious notebook called the \"Death Note.\" This notebook possesses the deadly power to kill anyone whose name is written in it while picturing their face. Light, initially using it to eliminate criminals, takes on the alias \"Kira\" and becomes both a symbol of fear among criminals and a hero to some. The series unfolds as Light engages in a high-stakes battle of wits with L, an enigmatic detective tasked with capturing Kira. \"Death Note\" delves deep into moral and ethical complexities, exploring questions about justice, the corrupting nature of power, and the consequences of absolute control. With a global fanbase and a legacy of sparking discussions on morality and power, it remains an iconic and influential work in the realm of manga and anime.",
+      "image": "deathnote.jpg",
+      "title": "death note",
+      "author": "L",
       "id": 1
+    },
+    {
+      "description": "\"One Piece\" is an iconic Japanese manga and anime series created by Eiichiro Oda. The story follows Monkey D. Luffy, a young and spirited pirate with the goal of becoming the Pirate King by finding the ultimate treasure known as the \"One Piece.\" Luffy's journey begins when he consumes a Devil Fruit, granting him the ability to stretch his body like rubber but also making him unable to swim. He forms a diverse and loyal crew, the Straw Hat Pirates, each with unique abilities and dreams of their own. Together, they embark on an epic adventure across a vast and imaginative world filled with pirates, marines, powerful foes, and mythical creatures.\r\n\r\n\"One Piece\" is renowned for its rich world-building, intricate plotlines, and a vast cast of characters, each with their own compelling stories and ambitions. Themes of friendship, loyalty, freedom, and the pursuit of dreams run deep throughout the series. It explores the concept of moral ambiguity, often blurring the lines between heroes and villains, as well as challenging traditional notions of justice.\r\n\r\nOver the years, \"One Piece\" has achieved tremendous popularity, setting records as one of the best-selling manga series of all time. It has also been adapted into a successful anime series, movies, video games, and other merchandise. Eiichiro Oda's work has left an indelible mark on the world of manga and anime, with its enduring legacy as a symbol of adventure and camaraderie, resonating with fans worldwide.",
+      "image": "onePiece.jpg",
+      "title": "One Piece",
+      "author": "L",
+      "id": 2
+    },
+    {
+      "description": "\"Naruto\" is a beloved Japanese manga and anime series created by Masashi Kishimoto. At its core, the story revolves around Naruto Uzumaki, a young ninja with dreams of becoming the strongest ninja and earning the respect of his village, Konohagakure. However, Naruto carries a dark secret—he is the host of the Nine-Tails Fox, a powerful tailed beast that attacked the village years ago. This leads to his ostracization by the villagers who fear the fox's influence.\r\n\r\nAs the series unfolds, Naruto embarks on a journey of self-discovery, growth, and camaraderie. He forms close bonds with his teammates Sasuke Uchiha and Sakura Haruno, under the guidance of their sensei, Kakashi Hatake. The series explores themes of friendship, perseverance, redemption, and the power of never giving up on one's dreams.\r\n\r\n\"Naruto\" delves into the complexities of the ninja world, including rival clans, political intrigues, and formidable enemies like Orochimaru, Akatsuki, and the mysterious organization, Root. Central to the story is Naruto's quest to become Hokage, the leader of the village, and his desire to protect his friends and the village from threats both external and internal.\r\n\r\nThe series has had a profound impact on pop culture, inspiring a dedicated fanbase and numerous spin-off series, movies, novels, and video games. It explores profound themes of loneliness, isolation, and the search for one's identity, resonating with audiences of all ages. \"Naruto\" is not just a tale of ninjas and battles; it is a story of personal growth, forgiveness, and the enduring power of bonds forged through adversity, leaving an enduring legacy in the world of manga and anime.",
+      "image": "naruto.jpg",
+      "title": "Naruto",
+      "author": "L",
+      "id": 3
+    },
+    {
+      "description": "\"Naruto Shippuden\" is the highly acclaimed sequel to the original \"Naruto\" series, expanding the epic tale of Naruto Uzumaki's journey as a ninja. Set in a world filled with intricate political alliances, powerful enemies, and mystical beings, \"Naruto Shippuden\" follows Naruto's growth from an impulsive young ninja to a formidable hero. The series delves into deeper themes of sacrifice, redemption, and the consequences of one's actions, while also exploring the backgrounds and development of beloved characters. With intense battles, intricate storytelling, and character-driven narratives, \"Naruto Shippuden\" has left an enduring legacy in the world of anime, captivating audiences with its richly developed ninja world and the indomitable spirit of its protagonist.",
+      "image": "narutoShipuden.jpg",
+      "title": "Naruto Shipuden",
+      "author": "N",
+      "id": 7
+    },
+    {
+      "description": "\"One Outs\" is a thrilling sports anime and manga series that offers a unique twist on the world of baseball. The story revolves around Toua Tokuchi, a highly intelligent and cunning pitcher who joins the lowly Saikyou Saitama Lycaons baseball team. What sets \"One Outs\" apart is its focus on mind games, strategy, and psychological battles within the sport. Tokuchi makes a one-of-a-kind deal with the team's owner, where he earns money for each out he pitches but also risks losing millions for each run he concedes. This high-stakes wager forms the core of the series, leading to intense confrontations and clever strategies.\r\n\r\n\"One Outs\" is a rollercoaster of suspense and tactics, where Tokuchi's unparalleled skills and ability to outsmart opponents make him a formidable force on the diamond. The series masterfully combines elements of sports, psychology, and strategy, captivating fans with its high-octane, intellectual battles and making it a standout in the sports anime genre.",
+      "image": "OneOuts.jpg",
+      "title": "One Outs",
+      "author": "N",
+      "id": 8
+    },
+    {
+      "description": "\"Hajime no Ippo\" Season 3, also known as \"Hajime no Ippo: Rising,\" continues the exhilarating journey of Ippo Makunouchi, a dedicated young boxer striving to make a name for himself in the world of professional boxing. In this season, Ippo faces even greater challenges as he progresses through the ranks. He squares off against formidable opponents, each with their unique fighting styles and stories, pushing him to refine his techniques and grow as a fighter.\r\n\r\nThe season also delves deeper into the personal lives and ambitions of Ippo's friends and fellow boxers at the Kamogawa Gym, offering a rich tapestry of character development. \"Hajime no Ippo: Rising\" combines intense and well-animated boxing matches with the emotional and motivational elements that have made the series a beloved classic in the sports anime genre.\r\n\r\nAs the series unfolds, Ippo's determination and the unwavering support of his friends and mentors inspire both fans and newcomers to the sport. \"Hajime no Ippo: Rising\" continues to captivate audiences with its thrilling boxing action and the enduring theme of perseverance, making it a must-watch for fans of sports anime and heartfelt storytelling.",
+      "image": "Hajime.jpg",
+      "title": "Hajime no ippo",
+      "author": "N",
+      "id": 9
+    },
+    {
+      "description": "\"Baki\" is a popular Japanese anime and manga series created by Keisuke Itagaki. The story revolves around Baki Hanma, a young martial artist who aspires to become the strongest fighter in the world. To achieve this goal, Baki faces off against a variety of formidable opponents, including powerful criminals and legendary martial artists. The series is known for its intense and brutal combat scenes, showcasing a wide range of martial arts styles and techniques. \"Baki\" has gained a dedicated fanbase for its action-packed narrative, unique characters, and the relentless pursuit of martial arts excellence.",
+      "image": "Baki.jpg",
+      "title": "Baki",
+      "author": "M",
+      "id": 10
     }
   ]
 }

@@ -2,15 +2,40 @@
 <html>
   <head>
     <title>Secure Node.js App</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/header&footer.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
+         <nav>
+        <div class="container">
+        <h1>Nouh <span>Blogs</span></h1>
+        <div class="links">
+            <a href="blogs">Home</a>
+            <a href="login">Login</a>
+            <a href="register">Sign Up</a>
+        </div>
+        </div>
+    </nav>
+    <section>
     <div class="container">
-    <h1 >Login</h1>
     <form action="/login" method="POST">
-      <input type="text" name="username" placeholder="Username" required />
-      <input type="password" name="password" placeholder="Password" required />
-      <button type="submit">Login</button>
+      <h3>Sing In</h3>
+      <div class="input-box">
+        <input type="text" class="user-input" name="username" placeholder="Username" required />
+         <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+         <input type="password" class="user-input" name="password" placeholder="Password" required />
+          <i class='bx bxs-lock-alt'></i>
+      </div>
+      <button type="submit" class="register">Login</button>
+       <p>Create an Account ? <a href="/register"> Sign Up </a></p>
     </form>
     </div>
+    </section>
+    <footer>
+       <p>&copy Ahmed Nouh blogs</p>
+    </footer>
   </body>
 </html>

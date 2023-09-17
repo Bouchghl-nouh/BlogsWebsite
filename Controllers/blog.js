@@ -1,4 +1,4 @@
-const { addBlog ,EditBlog} = require('../Api/BlogApi');
+const { addBlog ,EditBlog,DeleteBlog} = require('../Api/BlogApi');
 const jwt = require('jsonwebtoken');
 const xss = require('xss');
 const axios = require('axios');
@@ -6,7 +6,7 @@ const DB = require('../Models/DataBase.json')
 const {findBlog} = require('../helpers/findBlog');
 exports.AddingBlog = (req, res) => {
     const { description,title } = req.body;
-    const image = req.file.filename; 
+    const image = req.file?req.file.filename:'default1.png'; 
     const user = req.decoded;
     const newBlog = {
         description: xss(description),
@@ -31,7 +31,8 @@ exports.getBlogs = (req, res) => {
 }
 exports.deleteBlog = async(req, res) => {
     const id = req.params.id;
-    await axios.delete('http://localhost:3000/blogs/'+id)
+    // await axios.delete('http://localhost:3000/blogs/'+id)
+    await DeleteBlog(id);
     res.redirect('dashboard');
 }
 exports.getEditBlog = (req, res)=> {
@@ -42,17 +43,17 @@ exports.getEditBlog = (req, res)=> {
     }
     return res.render('Blog-Edit',{blog});
 }
-exports.EditingBlog = async(req, res) => {
+exports.EditingBlog = async (req, res) => {
     const id = req.params.id;
     const newBlog = req.body;
     const image = req.file;
     const blog = findBlog(id);
     const EditedBlog = {
-        description: newBlog.description,
-        image: image.filename,
-        title: newBlog.title
+        description:xss( newBlog.description),
+        image: xss(image? image.filename:blog.image),
+        title: xss(newBlog.title)
     }
-    await axios.patch('http://localhost:3000/blogs/'+id,EditedBlog);
-
+    //await axios.patch('http://localhost:3000/blogs/' + id, EditedBlog);
+    await EditBlog(id, EditedBlog);
     return res.redirect('../dashboard');
 }
